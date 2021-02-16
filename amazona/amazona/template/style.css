@@ -1,0 +1,120 @@
+html{
+    font-size: 62.5%; /* 16 px je defaultna, pa je 62.5% = 10px*/
+    box-sizing: border-box; /*radi lakše organizacije*/
+
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    font-size: 1.6rem; /*16px*/
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+/*Layout*/
+
+.grid-container
+{
+    display:grid; /*responsive and flexible*/
+    grid-template-areas: 
+    'header'
+    'main'
+    'footer'; 
+    grid-template-rows: 50px 1fr 50px;
+    height: 100%;
+}
+
+header
+{
+    grid-area:header;
+    /*povezuje header sa grid template areas*/
+    background-color: #203040;
+    height:100%;
+
+}
+h1 {
+    font-size:18px;
+    padding: 10px 0;
+}
+
+h2 {
+    font-size:16px;
+    padding: 10px 0;
+}
+
+a{
+    text-decoration: none;
+    color:#ffff;
+
+}
+a:hover{
+ color:#ff8000;
+}
+
+a.brand
+{   color:#ffff;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+main{
+    grid-area:main;
+    padding:1rem;
+}
+
+footer{
+    grid-area:footer;
+    background-color: #203040;
+    color:#ffff;
+    height: 100%;
+}
+
+.row{
+
+    display: flex; /*da budu u jednom redu*/
+    flex-wrap:wrap; /*responsive*/
+    justify-content: space-between;
+    align-items: center; /*vertikalno centriranje*/
+}
+
+.row.center{
+    justify-content: center;
+} /*da footer bude centriran*/
+
+img{
+    border-radius: 5px ;
+}
+
+img.medium{
+    max-width: 290px;
+    width:100%
+}
+
+.card {
+    border:1px #1e1e1f solid;
+    background-color: #ebebeb;
+    border-radius:5px;
+    margin:10 px;
+    
+}
+
+.card a {
+    color:rgb(0, 0, 105);
+}
+.card-body{
+    padding:10px;
+    
+}
+.card-body >* { /*sva direktna djeca*/
+    margin-bottom: 5px;
+}
+
+.price{
+    font-size:20px;
+}
+
+.rating span {
+    color:#f0c040;
+    margin: 1px;
+}
