@@ -216,7 +216,7 @@ function App() {
 
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center">Created by Venesa Seremet</footer>
+        <footer className="row center">© 2021 Venesa Seremet All Rights Reserved</footer>
       </div>
     </BrowserRouter>
   );
