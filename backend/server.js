@@ -9,11 +9,14 @@ import uploadRouter from './routers/uploadRouter.js';
 
 dotenv.config();
 
+
 const app = express();
+const connectionString =`mongodb+srv://E-commerce-Web-App:${process.env.DB_PASSWORD}@cluster0.qq12f.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGODB_URL|| 'mongodb://localhost/amazona', {
+
+mongoose.connect('mongodb+srv://E-commerce-Web-App:TgFk07892@cluster0.qq12f.mongodb.net/E-commerce-Web-App?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
